@@ -1,0 +1,59 @@
+{
+  "name": "ChattyLife",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "ios": "react-native run-ios",
+    "xcode": "open ios/ProjectName.xcworkspace",
+    "android": "react-native run-android",
+    "android:clean": "cd android && ./gradlew clean",
+    "android:apk": "npx jetify && cd android && ./gradlew clean && ./gradlew assembleRelease",
+    "android:bundle": "npx jetify && cd android && ./gradlew clean && ./gradlew bundleRelease",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:write": "eslint --debug src/ --fix",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "test:debug": "jest -o --watch --coverage=false",
+    "test:watch": "jest --watch --coverage=false --changedSince=origin/master",
+    "type-check": "tsc -p tsconfig.json --skipLibCheck",
+    "postinstall": "npx jetify"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/cli": "^5.0.1-alpha.2",
+    "@react-native-community/clipboard": "^1.5.1",
+    "@react-navigation/bottom-tabs": "^5.11.11",
+    "@react-navigation/native": "^5.9.2",
+    "@react-navigation/stack": "^5.14.2",
+    "@types/react-redux": "^7.1.24",
+    "axios": "^0.21.1",
+    "deox": "^3.3.1",
+    "expo-local-authentication": "^11.0.2",
+    "humps": "^2.0.1",
+    "immer": "^8.0.1",
+    "intl": "^1.2.5",
+    "react": "18.0.0",
+    "react-native": "0.69.3",
+    "react-native-bootsplash": "^3.1.5",
+    "react-native-reanimated": "^2.9.1",
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-vision-camera": "^2.14.1",
+    "vision-camera-face-detector": "^0.1.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/react-native": "^0.69.5",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.70.3",
+    "react-test-renderer": "18.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
